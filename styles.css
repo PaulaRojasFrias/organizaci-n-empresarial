@@ -334,6 +334,20 @@ body {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px 0;
+
+  /* Ocultar barras de scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Ocultar scrollbar en WebKit browsers (Chrome, Safari, Edge) */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Opcional: Ocultar también scroll vertical si aparece */
+.carousel {
+  overflow-y: hidden;
 }
 
 .service-card {
