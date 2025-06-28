@@ -118,6 +118,11 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-image: url("img/descargar\ \(4\).jpg"),
+    url("img/David\ Rudnick.jpg");
+  background-repeat: repeat-x, repeat-x;
+  background-position: left top, right top;
+  background-size: 50% 100%, 50% 100%; /* Cada una ocupa la mitad */
 }
 
 .hero-bg {
@@ -147,108 +152,94 @@ body {
 }
 
 .hero-content {
-  text-align: center;
+  width: 100%;
   z-index: 2;
+}
+
+/* Nuevo layout para hero con imágenes */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-center {
+  text-align: center;
+  z-index: 3;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  filter: brightness(0.8) contrast(1.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(127, 0, 255, 0.3);
+}
+
+.hero-img:hover {
+  filter: brightness(1) contrast(1.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.4);
+}
+
+/* Efectos especiales para las imágenes */
+.hero-image-left .hero-img {
+  animation: float-left 6s ease-in-out infinite;
+}
+
+.hero-image-right .hero-img {
+  animation: float-right 6s ease-in-out infinite reverse;
+}
+
+@keyframes float-left {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes float-right {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-2deg);
+  }
 }
 
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 8rem);
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--neon-cyan);
-  text-shadow: 0 0 20px var(--neon-cyan);
-}
+  margin-bottom: 0.1rem;
+  color: var(
+    --electric-violet
+  ); /* este sigue funcionando si está bien definido */
 
-.glitch {
-  position: relative;
-  animation: glitch 2s infinite;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.glitch::before {
-  animation: glitch-1 0.5s infinite;
-  color: var(--electric-violet);
-  z-index: -1;
-}
-
-.glitch::after {
-  animation: glitch-2 0.5s infinite;
-  color: var(--lime-yellow);
-  z-index: -2;
-}
-
-@keyframes glitch {
-  0%,
-  100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-}
-
-@keyframes glitch-1 {
-  0%,
-  100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(2px, -2px);
-  }
-  40% {
-    transform: translate(-2px, 2px);
-  }
-  60% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(2px, 2px);
-  }
-}
-
-@keyframes glitch-2 {
-  0%,
-  100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, -2px);
-  }
-  40% {
-    transform: translate(2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(-2px, 2px);
-  }
+  text-shadow: 0 0 4px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
 }
 
 .hero-slogan {
-  font-size: 1.2rem;
-  color: var(--soft-lilac);
-  margin-bottom: 2rem;
-  font-weight: 300;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--electric-violet);
+
+  text-shadow: 0 0 4px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
 }
 
 .cta-button {
@@ -338,16 +329,12 @@ body {
   /* Ocultar barras de scroll */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
+  overflow-y: hidden;
 }
 
 /* Ocultar scrollbar en WebKit browsers (Chrome, Safari, Edge) */
 .carousel::-webkit-scrollbar {
   display: none;
-}
-
-/* Opcional: Ocultar también scroll vertical si aparece */
-.carousel {
-  overflow-y: hidden;
 }
 
 .service-card {
@@ -565,11 +552,31 @@ body {
 }
 
 .page-content {
-  padding: 80px 0;
+  padding: 30px 0;
   min-height: 60vh;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: 2;
+  }
+
+  .hero-center {
+    order: 1;
+  }
+
+  .hero-image-right {
+    order: 3;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
@@ -621,6 +628,15 @@ body {
   .page-title {
     font-size: 3rem;
   }
+
+  .hero-layout {
+    gap: 2rem;
+  }
+
+  .hero-image {
+    max-width: 250px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -634,5 +650,9 @@ body {
 
   .service-card {
     min-width: 250px;
+  }
+
+  .hero-image {
+    max-width: 200px;
   }
 }

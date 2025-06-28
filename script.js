@@ -127,18 +127,3 @@ window.addEventListener("scroll", () => {
     heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
   }
 });
-
-// Solución alternativa más directa
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollBtn = document.getElementById("scroll-btn");
-  const servicesSection = document.getElementById("servicios");
-
-  if (scrollBtn && servicesSection) {
-    scrollBtn.addEventListener("click", function () {
-      servicesSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  }
-});
