@@ -1,85 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOFTCAT - Organización Formal</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOFTCAT - Organización Formal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">SOFTCAT</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li>
+          <a href="organizacion-formal.html" class="nav-link active">Organización Formal</a>
+        </li>
+        <li>
+          <a href="manual-puestos.html" class="nav-link">Manual de Puestos</a>
+        </li>
+        <li>
+          <a href="cultura-organizacional.html" class="nav-link">Cultura Organizacional</a>
+        </li>
+        <li>
+          <a href="rse.html" class="nav-link">RSE</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Organización Formal</h1>
+        <p class="page-subtitle">
+          Estructura y procesos organizacionales establecidos
+        </p>
+      </div>
+    </section>
+
+    <section class="page-content">
+
+      <section class="organigrama">
+        <div class="container">
+          <h2 class="section-title">Organigrama</h2>
+          <p class="page-description">
+            La estructura orgánica de SOFTCAT está diseñada para fomentar la
+            colaboración y la innovación, asegurando que cada área cumpla con
+            sus objetivos estratégicos.
+          </p>
+          <img src="organigrama.png" alt="Organigrama de SOFTCAT" class="organigrama-image" />
+        </div>
+      </section>
+
+      <section class="org-areas">
+        <div class="container">
+          <h2 class="section-title">Estructura Orgánica</h2>
+          <div class="organigrama-grid">
+
+            <!-- Área Técnica -->
+            <div class="org-card">
+              <div class="org-icon">⚙️</div>
+              <h3>Área Técnica</h3>
+              <p class="org-objective">Desarrollar, mantener y asegurar la calidad de los productos digitales.</p>
+              <ul>
+                <li><strong>Desarrollo de Software:</strong> Backend, Frontend, Base de datos</li>
+                <li><strong>Soporte y Mantenimiento:</strong> Mantenimiento, Atención de incidencias</li>
+                <li><strong>Calidad y Testing:</strong> QA, Testing</li>
+              </ul>
+            </div>
+
+            <!-- Área de Diseño y Producto -->
+            <div class="org-card">
+              <div class="org-icon">🎨</div>
+              <h3>Diseño y Producto</h3>
+              <p class="org-objective">Crear experiencias digitales innovadoras y usables.</p>
+              <ul>
+                <li>UX/UI, Prototipado</li>
+                <li>Diseño Técnico: estructuras de datos & procesos</li>
+                <li>Interfaces gráficas y optimización de procesos</li>
+              </ul>
+            </div>
+
+            <!-- Área de Consultoría -->
+            <div class="org-card">
+              <div class="org-icon">📈</div>
+              <h3>Consultoría Estratégica</h3>
+              <p class="org-objective">Asesorar en modelos de negocio y crecimiento sostenible.</p>
+              <ul>
+                <li>Validación de modelo</li>
+                <li>Escalabilidad & Branding</li>
+                <li>Análisis de mercado, market fit & competencia</li>
+              </ul>
+            </div>
+
+            <!-- Área de Marketing -->
+            <div class="org-card">
+              <div class="org-icon">📣</div>
+              <h3>Marketing y Comunicación</h3>
+              <p class="org-objective">Posicionar nuestra marca con estrategias digitales.</p>
+              <ul>
+                <li>Branding, Publicidad & RRPP</li>
+                <li>Estrategias digitales & contenido</li>
+                <li>Comunicación interna & relaciones públicas</li>
+              </ul>
+            </div>
+
+            <!-- Área Comercial -->
+            <div class="org-card">
+              <div class="org-icon">🤝</div>
+              <h3>Comercial</h3>
+              <p class="org-objective">Gestionar la relación con clientes y ventas.</p>
+              <ul>
+                <li>Prospecting & Ventas</li>
+                <li>Atención al cliente & postventa</li>
+                <li>Gestión de feedback</li>
+              </ul>
+            </div>
+
+            <!-- Área Administrativa -->
+            <div class="org-card">
+              <div class="org-icon">📋</div>
+              <h3>Administrativa</h3>
+              <p class="org-objective">Administrar RRHH, finanzas y operaciones.</p>
+              <ul>
+                <li>RRHH: Reclutamiento, nóminas & cultura</li>
+                <li>Finanzas: Contabilidad & presupuestos</li>
+                <li>Operaciones: Materiales & logística</li>
+              </ul>
+            </div>
+      </section>
+
+      <!-- Área Técnica, Diseño y Producto, Consultoría, Marketing, Comercial, Administrativa -->
+
+
+    </section>
+    </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
           <span class="logo-text">SOFTCAT</span>
         </div>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li>
-            <a href="organizacion-formal.html" class="nav-link active"
-              >Organización Formal</a
-            >
-          </li>
-          <li>
-            <a href="estructura-organica.html" class="nav-link"
-              >Estructura Orgánica</a
-            >
-          </li>
-          <li>
-            <a href="manual-puestos.html" class="nav-link">Manual de Puestos</a>
-          </li>
-          <li>
-            <a href="cultura-organizacional.html" class="nav-link"
-              >Cultura Organizacional</a
-            >
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Contacto</a>
+          <a href="#" class="footer-link">GitHub</a>
+          <a href="#" class="footer-link">LinkedIn</a>
         </div>
       </div>
-    </nav>
-
-    <main>
-      <section class="page-header">
-        <div class="container">
-          <h1 class="page-title">Organización Formal</h1>
-          <p class="page-subtitle">
-            Estructura y procesos organizacionales establecidos
-          </p>
-        </div>
-      </section>
-
-      <section class="page-content">
-        <div class="container">
-          <!-- Contenido a desarrollar -->
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <span class="logo-text">SOFTCAT</span>
-          </div>
-          <div class="footer-links">
-            <a href="#" class="footer-link">Contacto</a>
-            <a href="#" class="footer-link">GitHub</a>
-            <a href="#" class="footer-link">LinkedIn</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 SOFTCAT. Todos los derechos reservados.</p>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SOFTCAT. Todos los derechos reservados.</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

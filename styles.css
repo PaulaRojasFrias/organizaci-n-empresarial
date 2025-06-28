@@ -656,3 +656,168 @@ body {
     max-width: 200px;
   }
 }
+
+/* Grid de tarjetas */
+.organigrama-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Estilo de cada tarjeta */
+.org-card {
+  background: var(--dark-gray);
+  border: 2px solid var(--electric-violet);
+  border-radius: 15px;
+  padding: 2.5rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.org-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(127, 0, 255, 0.2);
+}
+
+/* Icono grande arriba */
+.org-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--neon-cyan);
+  display: inline-block;
+}
+
+/* Título */
+.org-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--electric-violet);
+  margin-bottom: 0.5rem;
+}
+
+/* Objetivo */
+.org-objective {
+  font-style: italic;
+  color: var(--soft-lilac);
+  margin-bottom: 1rem;
+}
+
+/* Lista interna */
+.org-card ul {
+  list-style: disc inside;
+  color: white;
+  line-height: 1.6;
+}
+
+.org-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .org-card {
+    padding: 2rem 1rem;
+  }
+  .org-icon {
+    font-size: 2rem;
+  }
+  .org-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Tarjeta de puesto */
+.job-card {
+  background: var(--dark-gray);
+  border: 2px solid var(--electric-violet);
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(127, 0, 255, 0.2);
+}
+
+/* Icono grande */
+.job-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--neon-cyan);
+}
+
+/* Título y datos */
+.job-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--electric-violet);
+  margin-bottom: 0.5rem;
+}
+.job-salary,
+.job-report,
+.job-collab {
+  font-size: 0.9rem;
+  color: var(--soft-lilac);
+  margin-bottom: 0.25rem;
+}
+
+/* Secciones internas */
+.job-card h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--neon-cyan);
+  font-size: 1.1rem;
+}
+.job-card ul {
+  list-style: disc inside;
+  margin-left: 0.5rem;
+  color: white;
+}
+.job-card ul li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Botón de aplicar */
+.apply-btn {
+  margin-top: auto;
+  text-align: center;
+  background: var(--neon-cyan);
+  color: var(--black);
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.apply-btn:hover {
+  background: var(--lime-yellow);
+}
+
+.salary-range {
+  color: white;
+  font-weight: 700;
+  background: var(--neon-cyan);
+  padding: 0 0.4rem;
+  border-radius: 4px;
+}
+
+.organigrama-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-top: 1rem;
+  box-shadow: 0 0 20px rgba(127, 0, 255, 0.3);
+}
